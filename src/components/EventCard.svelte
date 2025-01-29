@@ -27,6 +27,7 @@
   
   <div class="carousel">
     {#each images as image, index}
+      <!-- svelte-ignore a11y_img_redundant_alt -->
       <img
         src={image}
         alt="Hero Image"
@@ -34,7 +35,9 @@
       />
     {/each}
   
+    
     <div class="arrow left" on:click={prevImage}>&#10094;</div>
+  
     <div class="arrow right" on:click={nextImage}>&#10095;</div>
   </div>
   

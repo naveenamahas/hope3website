@@ -23,7 +23,7 @@
     ],
     2022: [
       { id: 4, title: "Leadership Program", date: "Jun 2022", image: "hope3_200.png" },
-      { id: 5, title: "Tech Workshop", date: "Feb 2022", image: "tech_2022.jpg" },
+      // { id: 5, title: "Tech Workshop", date: "Feb 2022", image: "tech_2022.jpg" },
     ],
     2021: [
       { id: 4, title: "Leadership Program", date: "Jun 2022", image: "hope3_200.png" },
