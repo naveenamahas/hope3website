@@ -47,6 +47,7 @@
   };
 </script>
 
+<!-- svelte-ignore css_unused_selector -->
 <Nav />
 
 <!-- Hero Carousel Section -->
