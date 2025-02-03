@@ -37,7 +37,7 @@
   };
 
   // Reactive variables
-  let selectedYear = "2023"; // Default year
+  let selectedYear = "2023"; 
   let events = allEvents[selectedYear];
 
   // Handle year selection
@@ -97,7 +97,8 @@
         
         {#if selectedYear === "2023"}
           <p>{event.date}</p>
-          <a href="/jan2023" class="see-more">See more</a>
+          <a href="/hope3website/jan2023" class="see-more">See more</a>
+
         {/if}
       </div>
     {/each}

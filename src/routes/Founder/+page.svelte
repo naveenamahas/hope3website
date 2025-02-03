@@ -4,6 +4,8 @@ import Nav from "../../components/Nav.svelte";
 
     
   </script>
+  <!-- svelte-ignore css_unused_selector -->
+  <!-- svelte-ignore css_unused_selector -->
   <Nav/>
   <!-- Founder Page -->
 
@@ -156,100 +158,114 @@ import Nav from "../../components/Nav.svelte";
   </div>
   
   <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      background-color: #f8f9fa;
-    }
     
-   .banner{
-    margin-top: 0%;
-   }
-    /* Founder Page Container */
-    .founder-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-  
-    /* Founder Container */
-    .founder-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
-      margin-bottom: 2rem;
-      /* background: #fff; */
-      /* border-radius: 10px; */
-      /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-      padding: 2rem;
-    }
-  
-    /* Founder Image */
-    .founder-image img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 2px solid #e63946; /* Red border around the circle */
-      object-fit: cover;
+    style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+  }
 
-    }
-  
-    /* Founder Info */
-    .founder-info {
-      margin-left: 2rem;
-      max-width: 700px;
-    }
-  
-    .founder-info h1 {
-      font-size: 2.5rem;
-      color: #333;
-    }
-  
-    .founder-info h2 {
-      font-size: 1.5rem;
-      color: #6c757d; /* Subtle gray for the subtitle */
-    }
-  
-    .founder-info p {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #555;
-    }
-  
-    .founder-info a {
-      color: #007bff;
-      text-decoration: none;
-    }
-  
-    .founder-info a:hover {
-      text-decoration: underline;
-    }
-  
-    /* Founder Video */
-    .founder-video iframe {
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(26, 35, 196, 0.1);
-      margin-left: 0%;
-      
-    }
-  
-    @media (max-width: 768px) {
+  .founder-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;  
+  }
+
+  /* Banner */
+  .banner {
+    width: 120%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* Title */
+  .tit {
+    background-color: rgb(187, 239, 246);
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(104, 104, 102);
+    padding-left: 5%;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Founder Container */
+  .founder-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+  }
+
+  /* Founder Image */
+  .founder-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #e63946;
+    object-fit: cover;
+  }
+
+  /* Founder Info */
+  .founder-info {
+    margin-left: 2rem;
+    max-width: 700px;
+  }
+
+  .founder-info h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .founder-info h2 {
+    font-size: 1.5rem;
+    color: #6c757d;
+  }
+
+  .founder-info p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .founder-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .founder-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Founder Video */
+  .founder-video iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(26, 35, 196, 0.1);
+    margin-left: 0;
+  }
+
+  /* Mobile View */
+  @media (max-width: 768px) {
     .banner {
       width: 100%;
-      margin-top: 1%;
+      height: 400px;
+      object-fit: cover;
     }
 
     .tit {
       font-size: 35px;
       width: 100%;
-      
+      text-align: center;
     }
 
     .founder-container {
@@ -290,17 +306,11 @@ import Nav from "../../components/Nav.svelte";
   @media (max-width: 1024px) {
     .banner {
       width: 100%;
-    }
-
-    .tit {
-      font-size: 40px;
-      text-align: center;
-      width: 100%;
+      height: 50%;
     }
 
     .founder-container {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
       text-align: center;
     }
 
@@ -334,11 +344,10 @@ import Nav from "../../components/Nav.svelte";
 
   /* Desktop View */
   @media (min-width: 1025px) {
-    .tit {
-      font-size: 50px;
-      padding-left: 5%;
-      text-align: left;
-      width: 110%;
+    .banner {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
     }
 
     .founder-container {
@@ -356,34 +365,15 @@ import Nav from "../../components/Nav.svelte";
       height: 200px;
     }
   }
-  
-    .text-capitalize {
-      background-color: rgb(155, 228, 228);
-      width: 100%;
-      height: 50px;
-      margin-top: auto;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 40px;
-      color: #858789;
-    }
-    .tit{
-        background-color: rgb(187, 239, 246);
-        font-size: 50px;
-        font-weight: 500;
-        color: rgb(104, 104, 102);
-        padding-left: 5%;
-        font-family: Montserrat, sans-serif;
-        margin: 0;
-        width: 110%;
-    }
-        
-    
-    .img {
-        height: auto;
-        width: 100%;
-        display: block;
-        margin: 0%;
-        margin-top: 0%;
-    }
-  </style>
+
+  .text-capitalize {
+    background-color: rgb(155, 228, 228);
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: #858789;
+  }
+</style>
   <Contact/>
