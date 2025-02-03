@@ -14,7 +14,8 @@
   display: flex;
   justify-content:space-evenly;
   
-  background-image: url('homepage.jpg');
+  background-image: url('/static/homepage.jpg');
+
   padding: 90px;
   border-radius: 2px; 
   width: 95%; 
