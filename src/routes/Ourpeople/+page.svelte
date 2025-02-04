@@ -49,13 +49,13 @@ const admission= [
         { name: "Mr Uday", title: "Entrepreneur, USA" ,image: "p2.png", },
         { name: "Mr Ganesh", title: "USA", image: "a5.png" },
     ];
-const finance= [
-        { name: "Mr Vishvakraj", title: "Govt of California, USA", image: "a1.png" },
-        { name: "Mr Karthik Babu", title: "Manhattan Associates, USA", image: "a2.png" },
-        { name: "Mr Ganesh", title: "AlixPartners,USA", image: "a5.png" },
-        { name: "Mr Raghul", title: "CTS, India" ,image: "raghul.png", },
-        { name: "Mr Saravanan", title: "Accenture, India", image: "volunteer.png" },
-    ];
+// const finance= [
+//         { name: "Mr Vishvakraj", title: "Govt of California, USA", image: "a1.png" },
+//         { name: "Mr Karthik Babu", title: "Manhattan Associates, USA", image: "a2.png" },
+//         { name: "Mr Ganesh", title: "AlixPartners,USA", image: "a5.png" },
+//         { name: "Mr Raghul", title: "CTS, India" ,image: "raghul.png", },
+//         { name: "Mr Saravanan", title: "Accenture, India", image: "volunteer.png" },
+//     ];
 
 const relation= [ 
         { name: "Mr Sivakumar", title: "Hope3, India", image: "shiva.png" },
@@ -69,7 +69,42 @@ const media=[
 ];
 
     
+let currentRow = 0;
+  const itemsPerRow = 2; // Show 2 items per row on mobile
 
+  // const finance= [
+//         { name: "Mr Vishvakraj", title: "Govt of California, USA", image: "a1.png" },
+//         { name: "Mr Karthik Babu", title: "Manhattan Associates, USA", image: "a2.png" },
+//         { name: "Mr Ganesh", title: "AlixPartners,USA", image: "a5.png" },
+//         { name: "Mr Raghul", title: "CTS, India" ,image: "raghul.png", },
+//         { name: "Mr Saravanan", title: "Accenture, India", image: "volunteer.png" },
+//     ];
+
+
+
+  let finance = [
+    { id: 1, image: 'a1.png', name: 'Mr Vishvakraj', title: 'Govt of California, USA' },
+    { id: 2, image: 'a2.png', name: 'Mr Karthik Babu', title: 'Manhattan Associates, USA' },
+    { id: 3, image: 'a5.png', name: 'Mr Ganesh', title: 'AlixPartners,USA' },
+    { id: 4, image: 'raghul.png', name: 'Mr Raghul', title: 'CTS, India' },
+    { id: 5, image: 'volunteer.png', name: 'Mr Saravanan', title: 'CFO' }
+    
+    // Add more profiles if needed
+  ];
+
+  // Handling the previous row
+  function prevRow() {
+    if (currentRow > 0) {
+      currentRow--;
+    }
+  }
+
+  // Handling the next row
+  function nextRow() {
+    if (currentRow < Math.floor(finance.length / itemsPerRow)) {
+      currentRow++;
+    }
+  }
     
 </script>
 
@@ -236,10 +271,86 @@ const media=[
         margin-bottom: 5rem;
         color: #727171;
     }
-    .finance-section{
-        width: 1200px;
-        height: 400px;
+    /* Finance Section Styling */
+.finance-section {
+    width: 100%;
+    padding: 20px;
+}
+
+.image-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Adjustments for mobile view: show 2 images per row */
+@media (max-width: 408px) {
+    .image-row {
+        flex-wrap: wrap;
+        gap: 10px;
     }
+
+    .profile-card {
+        width: 45%; /* 2 images per row */
+    }
+
+    .arrow-buttons {
+        display: block; /* Show arrow buttons on mobile */
+    }
+}
+
+/* Adjustments for desktop view: show all images in a single row without arrows */
+@media (min-width: 769px) {
+    .image-row {
+        flex-wrap: nowrap;
+    }
+
+    .profile-card {
+        width: 150px; /* Adjust as necessary */
+    }
+
+    .arrow-buttons {
+        display: none; /* Hide arrow buttons on desktop */
+    }
+}
+
+.arrow-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Default to hidden */
+}
+
+.arrow-buttons button {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.arrow-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
   .title
   {
     font-size: 3rem;
@@ -283,7 +394,7 @@ const media=[
   margin-top: 5px;
 }
 
-.partner-wrapper {
+/* .partner-wrapper {
   display: flex;
   justify-content: center; 
   flex-wrap: nowrap; 
@@ -299,7 +410,64 @@ const media=[
   gap: 20px; 
   background-color: rgb(255,255,255);
   padding: 100px;
+} */
+
+
+/* General styles */
+.partner-wrapper2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  gap: 1px; 
+  padding: 30px;
+} 
+
+.partner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  gap: 1px; 
+  background-color: #f0f0f0; 
+  padding: 40px; 
 }
+
+.partner-container {
+  text-align: center;
+  flex-basis: 22%; 
+}
+
+.partner-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.partner-link {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color:black;
+}
+/* For desktop, 4 partners in a row */
+@media (min-width: 768px) {
+  .partner-container {
+    flex-basis: 22%; 
+  }
+}
+
+/* For mobile, 1 partner per row */
+@media (max-width: 767px) {
+  .partner-container {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .partner-wrapper,
+  .partner-wrapper2 {
+    justify-content: center;
+  }
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -385,16 +553,23 @@ const media=[
  <!-- Finance -->
  <div class="finance-section">
     <h2 class="finance">Finance</h2>
-    <div class="board-grid">
-        {#each finance as profile}
-            <div class="profile-card">
-                <img src={profile.image} alt="{profile.name}" />
-                <h3>{profile.name}</h3>
-                <p>{profile.title}</p>
-            </div>
+    <div class="image-carousel">
+      <div class="image-row">
+        {#each finance as profile, index (profile.id)}
+          <div class="profile-card">
+            <img src={profile.image} alt="{profile.name}" />
+            <h3>{profile.name}</h3>
+            <p>{profile.title}</p>
+          </div>
         {/each}
+      </div>
+      <div class="arrow-buttons">
+        <button class="prev" on:click={prevRow}>&#10094;</button>
+        <button class="next" on:click={nextRow}>&#10095;</button>
+      </div>
     </div>
- </div>
+  </div>
+  
  <!-- Student Relations -->
  <div class="board-section">
     <h2>Student Relations</h2>
@@ -424,53 +599,49 @@ const media=[
 <!-- Industrial Partners -->
 
 
-<div>
+<div class="industrial-partners">
     <h2 class="title">Industrial Partners</h2>
-  </div> 
+</div> 
 <div class="partner-wrapper">
     <div class="partner-container">
-      <img src="arjava_desk.png" alt="Arjava Logo" class="partner-logo" />
-      <a href="https://www.arjavatech.com" target="_blank" class="partner-link">Arjava Technologies</a>
+        <img src="arjava_desk.png" alt="Arjava Logo" class="partner-logo" />
+        <a href="https://www.arjavatech.com" target="_blank" class="partner-link">Arjava Technologies</a>
     </div>
     <div class="partner-container">
-      <img src="mugavari_desk.png" alt="Mugavari Logo" class="partner-logo" />
-      <a href="https://www.mugavarifoundation.org" target="_blank" class="partner-link">Mugavari Foundation</a>
+        <img src="mugavari_desk.png" alt="Mugavari Logo" class="partner-logo" />
+        <a href="https://www.mugavarifoundation.org" target="_blank" class="partner-link">Mugavari Foundation</a>
     </div>
     <div class="partner-container">
-      <img src="etutorborad_desk.png" alt="ETutorBoard Logo" class="partner-logo" />
-      <a href="https://etutorboard.com" target="_blank" class="partner-link">ETutorBoard</a>
+        <img src="etutorborad_desk.png" alt="ETutorBoard Logo" class="partner-logo" />
+        <a href="https://etutorboard.com" target="_blank" class="partner-link">ETutorBoard</a>
     </div>
     <div class="partner-container">
-      <img src="tngo.png" alt="TNNGO Logo" class="partner-logo" />
-      <a href="https://tnngo.org" target="_blank" class="partner-link">TNNGO</a>
+        <img src="tngo.png" alt="TNNGO Logo" class="partner-logo" />
+        <a href="https://tnngo.org" target="_blank" class="partner-link">TNNGO</a>
     </div>
 </div>
 
-
-
-<!--  -->
+<!-- Non Profit Partners -->
 <h2 class="title1">Non Profit Partners</h2>   
 <section class="partner-wrapper2">
-     
-
-   <div class="partner-container">
-     <img src="ssf_desk.png" alt="Arjava Logo" class="partner-logo" />
-     <a href="https://www.arjavatech.com" target="_blank" class="partner-link">shooting atars foundation</a>
-   </div>
-   <div class="partner-container">
-     <img src="abdulkalam_desk.png" alt="Mugavari Logo" class="partner-logo" />
-     <a href="https://apjabdulkalamfoundation.org" target="_blank" class="partner-link">abdul kalam Foundation</a>
-   </div>
-   <div class="partner-container">
-     <img src="mugavari_desk.png" alt="ETutorBoard Logo" class="partner-logo" />
-     <a href="https://www.mugavarifoundation.org" target="_blank" class="partner-link">Mugavari Foundation</a>
-   </div>
-   <div class="partner-container">
-     <img src="tngo.png" alt="TNNGO Logo" class="partner-logo" />
-     <a href="https://www.drabdulkalamtrust.org" target="_blank" class="partner-link">Namco</a>
-   </div>
-
+    <div class="partner-container">
+        <img src="ssf_desk.png" alt="Arjava Logo" class="partner-logo" />
+        <a href="https://www.arjavatech.com" target="_blank" class="partner-link">shooting atars foundation</a>
+    </div>
+    <div class="partner-container">
+        <img src="abdulkalam_desk.png" alt="Mugavari Logo" class="partner-logo" />
+        <a href="https://apjabdulkalamfoundation.org" target="_blank" class="partner-link">abdul kalam Foundation</a>
+    </div>
+    <div class="partner-container">
+        <img src="mugavari_desk.png" alt="ETutorBoard Logo" class="partner-logo" />
+        <a href="https://www.mugavarifoundation.org" target="_blank" class="partner-link">Mugavari Foundation</a>
+    </div>
+    <div class="partner-container">
+        <img src="tngo.png" alt="TNNGO Logo" class="partner-logo" />
+        <a href="https://www.drabdulkalamtrust.org" target="_blank" class="partner-link">Namco</a>
+    </div>
 </section>
+
 
 
 <!-- <section class="success-section">

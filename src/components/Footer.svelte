@@ -14,8 +14,8 @@
   display: flex;
   justify-content:space-evenly;
   
-  /* background-image: url('/static/homepage.jpg'); */
-  background-color: #ffb700;
+ background-image: url('/static/homepage.jpg'); 
+  /* background-color: #ffb700; */
 
   padding: 90px;
   border-radius: 2px; 

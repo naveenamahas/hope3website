@@ -65,7 +65,8 @@ import Nav from "../../components/Nav.svelte";
   <div class="founder-page">
     
   
-    <div class="founder-container">
+    <div class="founder-container" style="background-color: #f0f0f0; width:100%">
+
       <div class="founder-image">
         <img
           src="founder_Image_1.png"  
@@ -258,13 +259,13 @@ import Nav from "../../components/Nav.svelte";
   @media (max-width: 768px) {
     .banner {
       width: 100%;
-      height: 400px;
+      height: 150px;
       object-fit: cover;
     }
 
     .tit {
       font-size: 35px;
-      width: 100%;
+      width: 95%;
       text-align: center;
     }
 
@@ -291,14 +292,14 @@ import Nav from "../../components/Nav.svelte";
     }
 
     .founder-image img {
-      width: 180px;
-      height: 180px;
+      width: 100px;
+      height: 100px;
     }
 
     .founder-video iframe {
       width: 100%;
-      max-width: 360px;
-      height: 200px;
+      max-width: 300px;
+      height: 150px;
     }
   }
 
@@ -306,7 +307,13 @@ import Nav from "../../components/Nav.svelte";
   @media (max-width: 1024px) {
     .banner {
       width: 100%;
-      height: 50%;
+      height: 150px;
+      
+    }
+    .tit {
+      font-size: 35px;
+      width: 95%;
+      text-align: center;
     }
 
     .founder-container {
@@ -315,8 +322,9 @@ import Nav from "../../components/Nav.svelte";
     }
 
     .founder-info {
-      text-align: center;
+      text-align:left;
       margin: 1rem 0;
+      color: #858688;
     }
 
     .founder-info h1 {
@@ -332,13 +340,14 @@ import Nav from "../../components/Nav.svelte";
     }
 
     .founder-image img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
     }
 
     .founder-video iframe {
-      width: 90%;
-      height: 200px;
+      display: table-cell;
+    vertical-align: middle;
+    padding: 0 15px;
     }
   }
 
@@ -347,7 +356,7 @@ import Nav from "../../components/Nav.svelte";
     .banner {
       width: 100%;
       height: auto;
-      max-height: 400px;
+      max-height: 600px;
     }
 
     .founder-container {

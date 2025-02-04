@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-
+import { Router, Route } from "svelte-routing";
   import Nav from "../../components/Nav.svelte";
   import EventCard from "../../components/EventCard.svelte";
   import EventDetails from "../../components/EventDetails.svelte"
@@ -17,10 +17,10 @@
   // All events categorized by year
   const allEvents = {
     2023: [
-      { id: 1, title: "AV² 2.0", date: "Jan 2023", image: "jan_2023.jpg" },
-      { id: 2, title: "Career Guidance Program", date: "Sep 2023", image: "pic2.png" },
-      { id: 3, title: "Youth Conference", date: "Aug 2023", image: "aug_2023.jpg" },
-    ],
+    { id: 1, title: "AV² 2.0", date: "Jan 2023", image: "jan_2023.jpg" },
+    { id: 2, title: "Career Guidance Program", date: "Sep 2023", image: "event.png" },
+    { id: 3, title: "Youth Conference", date: "Aug 2023", image: "aug_2023.jpg" },
+  ],
     2022: [
       { id: 4, title: "Leadership Program", date: "Jun 2022", image: "hope3_200.png" },
       // { id: 5, title: "Tech Workshop", date: "Feb 2022", image: "tech_2022.jpg" },
@@ -87,23 +87,31 @@
 </section>
 
 <!-- Events Grid -->
-<section class="events">
-  <h2>Events {selectedYear}</h2>
-  <div class="events-grid">
-    {#each events as event}
-      <div class="event-card">
-        <img src={"/" + event.image} alt={event.title} />
-        <h3>{event.title}</h3>
-        
-        {#if selectedYear === "2023"}
-          <p>{event.date}</p>
-          <a href="/hope3website/jan2023" class="see-more">See more</a>
+<Router>
+  <!-- Define routes for your event details pages -->
+  <Route path="/jan2023" component="{EventDetails}" />
+  <Route path="/sep2023" component="{EventDetails}" />
+  <Route path="/aug2023" component="{EventDetails}" />
 
-        {/if}
-      </div>
-    {/each}
-  </div>
-</section>
+  <!-- Your main content where events are displayed -->
+  <section class="events">
+    <h2>Events {selectedYear}</h2>
+    <div class="events-grid">
+      {#each events as event}
+        <div class="event-card">
+          <img src={event.image} alt={event.title} />
+          <h3>{event.title}</h3>
+          
+          {#if selectedYear === "2023"}
+            <p>{event.date}</p>
+            <a href={"/hope3website/" + event.date.toLowerCase().replace(" ", "")} class="see-more">See more</a>
+
+          {/if}
+        </div>
+      {/each}
+    </div>
+  </section>
+</Router>
 
 
 <style>

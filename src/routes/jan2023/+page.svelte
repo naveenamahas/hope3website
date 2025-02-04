@@ -206,15 +206,21 @@
     padding: 0.8rem;
     font-size: 0.9rem;
     color: #555;
-    line-height: 1.4;
+    line-height: 1.7;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .event-card a {
+    display: block;  /* Makes the link take up full width */
+    text-align: left; /* Aligns the text to the left */
     color: red;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-  }
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.8rem; /* Ensures consistent spacing */
+}
 
   .event-card a:hover {
     text-decoration: underline;
@@ -233,12 +239,12 @@
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     color: #0078d4;
-    background-color: rgba(171, 232, 232, 0.915);
+    background-color: rgba(184, 237, 237, 0.915);
     padding: 1rem;
     border-radius: 5px;
   }
 
-  .next-button {
+  /* .next-button {
     text-align: center;
     margin: 1.5rem 0;
   }
@@ -256,7 +262,7 @@
 
   .next-button button:hover {
     background-color: #005a9e;
-  }
+  } */
   @media (max-width: 768px) {
   .events-grid {
     grid-template-columns: 1fr; /* Single column for mobile */

@@ -39,13 +39,12 @@
     .arrow {
       position: absolute;
       top: 50%;
-      /* transform: translateY(-50%); */
-      /* background: rgba(0, 0, 0, 0.5); */
-      /* color: white; */
+      transform: translateY(-50%); 
+      background: rgba(253, 252, 252, 0.2); 
       border: none;
-      /* padding: 0.5rem 1rem; */
+     
       cursor: pointer;
-      /* z-index: 10; */
+       /* z-index: 40;  */
     }
   
     .left {
@@ -56,9 +55,9 @@
       right: 0;
     }
   
-    .arrow:hover {
+    /* .arrow:hover {
       background: rgba(0, 0, 0, 0.8);
       color: aliceblue;
-    }
+    } */
   </style>
   
