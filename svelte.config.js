@@ -1,3 +1,4 @@
+// @ts-nocheck
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -8,7 +9,8 @@ const config = {
         adapter: adapter({
             pages: 'build',
             assets: 'build',
-            fallback: 'index.html' // Ensures SPA routing works
+            fallback: 'index.html'
+            // Ensures SPA routing works
         }),
         paths: {
             base: "/hope3website" // IMPORTANT: Set this to your GitHub repo name

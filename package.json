@@ -3,7 +3,6 @@
 	"version": "0.0.1",
 	"type": "module",
 	"homepage": "https://naveenamahas.github.io/hope3website",
-
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
