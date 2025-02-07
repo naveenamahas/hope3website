@@ -1,35 +1,36 @@
 <script>
   import Dropdown from "./Dropdown.svelte";
   // @ts-ignore
-  import { browser } from "$app/environment"; // Import browser constant
+  import { browser } from "$app/environment";
 
   const dropdownItems = [
-    { name: "Founders", link: "/Founder" },
-    { name: "Mission/Vision", link: "/Mission" },
-    { name: "Financials", link: "/Finance" },
-    { name: "Admissions", link: "/Admission" },
+    { name: "Founders", link: "/hope3website/Founder" },
+    { name: "Mission/Vision", link: "/hope3website/Mission" },
+    { name: "Financials", link: "/hope3website/Finance" },
+    { name: "Admissions", link: "/hope3website/Admission" },
   ];
 
-  let currentPath = browser ? window.location.pathname : '/';
+  let currentPath = browser ? window.location.pathname : '/hope3website/';
   let showMobileMenu = false;
 </script>
 
 <header>
   <div class="header-container">
     <button class="mobile-menu-toggle" on:click={() => (showMobileMenu = !showMobileMenu)}>
-      <img src="hamburger_menu.png" alt="Menu icon" />
+      <img src="/hope3website/hamburger_menu.png" alt="Menu icon" />
     </button>
+
+    <img src="/hope3website/logo.png" alt="Logo" />
     
-    <img src="logo.png" alt="Logo" />
     <nav class="{showMobileMenu ? 'mobile-visible' : ''}">
-      <!-- Updated Links with /hope3website -->
       <a href="/hope3website/" class="{currentPath === '/hope3website/' ? 'active' : ''}">Home</a>
       <Dropdown title="Who We Are" items={dropdownItems} />
-      <a href="/Ourpeople" class="{currentPath === '/Ourpeople' ? 'active' : ''}">Our People</a>
-      <a href="/Success" class="{currentPath === '/Success' ? 'active' : ''}">Success Stories</a>
-      <a href="/getinvoce" class="{currentPath === '/getinvoce' ? 'active' : ''}">Get Involved</a>
-      <a href="/Event" class="{currentPath === '/Event' ? 'active' : ''}">Event</a>
+      <a href="/hope3website/Ourpeople" class="{currentPath === '/hope3website/Ourpeople' ? 'active' : ''}">Our People</a>
+      <a href="/hope3website/Success" class="{currentPath === '/hope3website/Success' ? 'active' : ''}">Success Stories</a>
+      <a href="/hope3website/getinvoce" class="{currentPath === '/hope3website/getinvoce' ? 'active' : ''}">Get Involved</a>
+      <a href="/hope3website/Event" class="{currentPath === '/hope3website/Event' ? 'active' : ''}">Event</a>
     </nav>
+
     <div class="buttons">
       <a href="https://www.hope3.org/donate.html" class="button donate">Donate</a>
       <a href="https://www.hope3.org/apply2024.html" class="button apply">Apply</a>
@@ -38,7 +39,6 @@
 </header>
 
 <style>
-  /* Header container */
   .header-container {
     display: flex;
     align-items: center;
@@ -49,20 +49,18 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  /* Mobile menu toggle icon */
   .mobile-menu-toggle {
-    display: none; /* Hide by default on desktop */
+    display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
-    left: 2px; /* Align to the left side */
-    top: 2rem; /* Center vertically */
-    z-index: 1000; /* Ensure it appears above other elements */
+    left: 2px;
+    top: 2rem;
+    z-index: 1000;
   }
 
-  /* Navigation menu */
   nav {
     display: flex;
     gap: 1rem;
@@ -73,13 +71,13 @@
     flex-direction: column;
     gap: 1rem;
     position: absolute;
-    top: 100px; /* Adjust based on header height */
+    top: 100px;
     left: 0;
     background-color: white;
-    width: 100%; /* Full width for dropdown */
+    width: 100%;
     padding: 2rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999; /* Ensure it's above other elements */
+    z-index: 999;
   }
 
   nav a {
@@ -87,20 +85,19 @@
     color: #7b7a7a;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
+    
   }
 
   nav a:hover {
     color: #3431e3;
   }
 
-  /* Active link styles */
   nav a.active {
     color: #3431e3;
     font-weight: bold;
     text-decoration: underline;
   }
 
-  /* Buttons */
   .buttons {
     display: flex;
     gap: 1rem;
@@ -134,60 +131,38 @@
     background-color: #e61f2f;
   }
 
-  /* Mobile menu toggle icon */
   @media (max-width: 768px) {
     .mobile-menu-toggle {
-      display: block; /* Show on mobile */
+      display: block;
     }
-  }
 
-  /* Navigation menu */
-  nav {
-    display: flex;
-    gap: 1rem;
-  }
-
-  /* Show mobile menu when toggled */
-  nav.mobile-visible {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100px; /* Adjust based on header height */
-    left: 0;
-    background-color: white;
-    width: 100%; /* Full width for dropdown */
-    padding: 2rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999; /* Ensure it's above other elements */
-  }
-
-  /* Make sure the regular menu is hidden on mobile */
-  @media (max-width: 768px) {
     nav {
-      display: none; /* Hide navigation links by default on mobile */
+      display: none;
+    }
+
+    nav.mobile-visible {
+      display: flex;
     }
 
     .buttons {
-      flex-direction: column; /* Stack buttons vertically */
-      gap: 0.5rem; /* Adjust spacing */
+      flex-direction: column;
+      gap: 0.5rem;
       margin-left: 1%;
     }
   }
 
-  /* Default behavior for large screens (desktop) */
   @media (min-width: 769px) {
     .mobile-menu-toggle {
-      display: none; /* Hide hamburger menu on desktop */
+      display: none;
     }
 
     nav {
-      display: flex; /* Show the nav on desktop */
+      display: flex;
     }
 
     .buttons {
-      flex-direction: row; /* Display buttons horizontally */
-      gap: 1rem; /* Default spacing */
+      flex-direction: row;
+      gap: 1rem;
     }
   }
 

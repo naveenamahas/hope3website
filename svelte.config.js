@@ -11,8 +11,7 @@ const config = {
       fallback: 'index.html' // Ensures SPA routing works
     }),
     paths: {
-      base: '/hope3website', // ✅ GitHub repository name
-      assets: 'https://naveenamahas.github.io/hope3website' // ✅ Absolute URL (fixes the error)
+      base: '/hope3website', // ✅ Set this to your GitHub repo name
     },
     appDir: 'internal',
     prerender: {
