@@ -14,7 +14,7 @@
   display: flex;
   justify-content:space-evenly;
   
- background-image: url('/static/homepage.jpg'); 
+ background-image: url('/homepage.jpg'); 
   /* background-color: #ffb700; */
 
   padding: 90px;

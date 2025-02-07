@@ -89,9 +89,10 @@ import { Router, Route } from "svelte-routing";
 <!-- Events Grid -->
 <Router>
   <!-- Define routes for your event details pages -->
-  <Route path="/jan2023" component="{EventDetails}" />
-  <Route path="/sep2023" component="{EventDetails}" />
-  <Route path="/aug2023" component="{EventDetails}" />
+  <Route path="/hope3website/jan2023" component="{EventDetails}" />
+<Route path="/hope3website/sep2023" component="{EventDetails}" />
+<Route path="/hope3website/aug2023" component="{EventDetails}" />
+
 
   <!-- Your main content where events are displayed -->
   <section class="events">
@@ -104,7 +105,8 @@ import { Router, Route } from "svelte-routing";
           
           {#if selectedYear === "2023"}
             <p>{event.date}</p>
-            <a href={"/hope3website/" + event.date.toLowerCase().replace(" ", "")} class="see-more">See more</a>
+            <a href={"/" + event.date.toLowerCase().replace(" ", "")} class="see-more">See more</a>
+
 
           {/if}
         </div>

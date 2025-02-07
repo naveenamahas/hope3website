@@ -1,12 +1,13 @@
 <script>
   import Dropdown from "./Dropdown.svelte";
+  // @ts-ignore
   import { browser } from "$app/environment"; // Import browser constant
 
   const dropdownItems = [
-    { name: "Founders", link: "/hope3website/Founder" },
-    { name: "Mission/Vision", link: "/hope3website/Mission" },
-    { name: "Financials", link: "/hope3website/Finance" },
-    { name: "Admissions", link: "/hope3website/Admission" },
+    { name: "Founders", link: "/Founder" },
+    { name: "Mission/Vision", link: "/Mission" },
+    { name: "Financials", link: "/Finance" },
+    { name: "Admissions", link: "/Admission" },
   ];
 
   let currentPath = browser ? window.location.pathname : '/';
@@ -24,10 +25,10 @@
       <!-- Updated Links with /hope3website -->
       <a href="/hope3website/" class="{currentPath === '/hope3website/' ? 'active' : ''}">Home</a>
       <Dropdown title="Who We Are" items={dropdownItems} />
-      <a href="/hope3website/Ourpeople" class="{currentPath === '/hope3website/Ourpeople' ? 'active' : ''}">Our People</a>
-      <a href="/hope3website/Success" class="{currentPath === '/hope3website/Success' ? 'active' : ''}">Success Stories</a>
-      <a href="/hope3website/getinvoce" class="{currentPath === '/hope3website/getinvoce' ? 'active' : ''}">Get Involved</a>
-      <a href="/hope3website/Event" class="{currentPath === '/hope3website/Event' ? 'active' : ''}">Event</a>
+      <a href="/Ourpeople" class="{currentPath === '/Ourpeople' ? 'active' : ''}">Our People</a>
+      <a href="/Success" class="{currentPath === '/Success' ? 'active' : ''}">Success Stories</a>
+      <a href="/getinvoce" class="{currentPath === '/getinvoce' ? 'active' : ''}">Get Involved</a>
+      <a href="/Event" class="{currentPath === '/Event' ? 'active' : ''}">Event</a>
     </nav>
     <div class="buttons">
       <a href="https://www.hope3.org/donate.html" class="button donate">Donate</a>

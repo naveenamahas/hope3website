@@ -149,8 +149,8 @@
       
     ];
   // Toggle the visibility of the full description for an event
-  function toggleReadMore(id) {
-    showFullText[id] = !showFullText[id];
+ function toggleReadMore(id) {
+    showFullText = { ...showFullText, [id]: !showFullText[id] };
   }
 </script>
 
