@@ -47,10 +47,10 @@
     events = allEvents[year];
   };
   
-  // Navigate to event details page
   const goToEvent = (eventPath) => {
     goto(eventPath);
   };
+
   </script>
   
   <Nav />
