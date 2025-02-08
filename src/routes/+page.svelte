@@ -98,6 +98,7 @@
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
+    text-decoration: none;
   }
   
   .button.apply {

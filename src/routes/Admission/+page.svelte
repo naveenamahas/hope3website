@@ -199,12 +199,28 @@ color: #d4ab15;
     flex-direction: column;
     align-items: center;
   }
+  .step:nth-child(1), 
+  .step:nth-child(3), 
+  .step:nth-child(5){ 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-  .step img {
+  .step:nth-child(1) img,
+  .step:nth-child(3) img,
+  .step:nth-child(5) img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto; /* Centers the image */
+    display: block;
+  }
+  
+.step img {
   position: static;
   margin-bottom: 1rem;
   transform: none;
-}
+  }
 
 
   .step-content,
@@ -261,8 +277,8 @@ color: #d4ab15;
   }
 
   .circle-image {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin-top: 0%;
   }
 

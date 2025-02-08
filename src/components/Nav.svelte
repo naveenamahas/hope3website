@@ -39,141 +39,215 @@
 </header>
 
 <style>
+      * {
+      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+  }
+
   .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 95%;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
   }
 
   .mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-    left: 2px;
-    top: 2rem;
-    z-index: 1000;
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+  }
+
+  .nav-hope-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 140px;
   }
 
   nav {
-    display: flex;
-    gap: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-grow: 1;
   }
 
   nav.mobile-visible {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    background-color: white;
-    width: 100%;
-    padding: 2rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: white;
+      width: 100%;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      overflow-x: hidden;
   }
 
   nav a {
-    text-decoration: none;
-    color: #7b7a7a;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    
+      text-decoration: none;
+      color: #7b7a7a;
+      font-size: 1rem;
+      font-weight: bold;
   }
 
   nav a:hover {
-    color: #3431e3;
+      color: #0078bd !important;
   }
 
   nav a.active {
-    color: #3431e3;
-    font-weight: bold;
-    text-decoration: underline;
-  }
+      color: #0078bd !important;
+      font-weight: bolder;
+}
 
   .buttons {
-    display: flex;
-    gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
   }
 
   .button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer; 
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
   }
 
   .button.apply {
-    background-color: #ebd40a;
-    color: white;
+    background-color: #fcbe04;
+    border-color: #ffc107;
+      color: white;
+      order: 1;
+      
   }
 
   .button.donate {
-    background-color: orangered;
-    color: white;
+      background-color: orangered;
+      color: white;
+      order: 2;
   }
 
   .button.apply:hover {
-    background-color: #e8cd60;
+    background-color: #e0a800;
+    border-color: #d39e00;
+    color: black;
   }
 
   .button.donate:hover {
-    background-color: #e61f2f;
+      background-color: #e61f2f;
   }
 
   @media (max-width: 768px) {
-    .mobile-menu-toggle {
-      display: block;
-    }
-
-    nav {
-      display: none;
-    }
-
-    nav.mobile-visible {
-      display: flex;
-    }
-
-    .buttons {
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-left: 1%;
-    }
+      .header-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem 1rem;
+      }
+      .mobile-menu-toggle {
+          position: relative;
+          left: 0;
+          top: auto;
+          transform: none;
+      }
+      .nav-hope-logo {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      .buttons {
+          position: relative;
+          right: 0;
+          top: auto;
+          transform: none;
+          flex-direction: column;
+         
+      }
+      nav {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.8rem;
+          display: none;
+          width: 100%;
+      }
+      nav.mobile-visible {
+          display: flex;
+      }
   }
 
   @media (min-width: 769px) {
-    .mobile-menu-toggle {
-      display: none;
-    }
-
-    nav {
-      display: flex;
-    }
-
-    .buttons {
-      flex-direction: row;
-      gap: 1rem;
-    }
+      .mobile-menu-toggle {
+          display: none;
+      }
+      .header-container {
+          flex-direction: row;
+      }
+      nav {
+          display: flex;
+      }
+      .buttons {
+          flex-direction: row;
+          gap: 1rem;
+      }
   }
 
   @media (max-width: 480px) {
-    nav a {
-      font-size: 0.9rem;
-    }
-
-    .button {
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-    }
+      nav a {
+          font-size: 0.9rem;
+      }
+      .button {
+          font-size: 0.6rem;
+          padding: 0.4rem 0.8rem;
+      }
   }
+
+  /* @media(min-width:1200px) {
+      .navbutton {
+          margin-top: 2.9em !important;
+      }
+  }
+
+  .dropdown:hover .dropdown-menu {
+      display: block;
+  }
+
+  @media(max-width: 340px) {
+      .nav-hope-logo {
+          transform: translateX(-50%);
+          position: relative;
+      }
+  }
+
+  @media(max-width: 320px) {
+      #nav-bar-button {
+          position: relative !important;
+          top: 7px !important;
+          font-size: .5rem;
+      }
+  } */
+
 </style>

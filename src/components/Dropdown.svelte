@@ -7,6 +7,9 @@
   </script>
   
   <style>
+    *{
+      font-family: 'Montserrat', sans-serif;
+    }
     .dropdown {
       position: relative;
       display: inline-block;
