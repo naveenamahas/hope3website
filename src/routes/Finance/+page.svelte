@@ -26,10 +26,12 @@
 <!-- Image Section with Two Images -->
 <div class="image">
     <div>
+        <!-- svelte-ignore a11y_img_redundant_alt -->
         <img src="revenue_of_2020.jpeg" alt="Revenue Image">
     </div>
     
     <div>
+        <!-- svelte-ignore a11y_img_redundant_alt -->
         <img src="expense_of_2020.jpeg" alt="Expense Image">
     </div>
 </div>
@@ -38,6 +40,9 @@
 <Contact/>
 
 <style>
+  *{
+    font-family: 'Montserrat', sans-serif; 
+  }
   /* Title Styling */
   .tit {
     background-color: rgb(187, 239, 246);
@@ -61,14 +66,24 @@
   /* Responsive Design for Banner Image */
   @media (max-width: 768px) {
       .img {
-          height: 350px; /* Adjust height for medium screens */
+          height: 220px; 
       }
+      .tit
+    {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 
   @media (max-width: 480px) {
       .img {
-          height: 350px; /* Adjust height for small screens */
+        max-height: 90px; 
       }
+    .tit
+    {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 
   /* Title Section Styling */
@@ -77,7 +92,6 @@
     margin-top: 3%;
     text-align: start;
     color: rgb(128, 127, 127);
-    /* font-family: 'Montserrat', sans-serif; */
     font-size: 18px;
     margin-left: 15%;
     padding: 15px 8px;
@@ -87,15 +101,14 @@
   /* Image Section Styling */
   .image {
     width: 100%;
-    gap: 1.5rem; /* Ensures the container spans the full width */
+    gap: 1.5rem; 
   }
 
   .image img {
-    width: 70%; /* The image will span the full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes inline spacing */
-    margin-left: 15%; /* Removes extra margins */
-    gap: 2rem;
+    width: 70%; 
+    height: auto; 
+    display: block; 
+    margin-left: 15%; 
     margin-bottom: 3%;
   }
 </style>

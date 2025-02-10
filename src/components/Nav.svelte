@@ -43,7 +43,7 @@
       font-family: 'Montserrat', sans-serif;
       box-sizing: border-box;
   }
-
+ 
   .header-container {
       display: flex;
       align-items: center;
@@ -68,12 +68,7 @@
       z-index: 1000;
   }
 
-  .nav-hope-logo {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 140px;
-  }
+  
 
   nav {
       display: flex;
@@ -160,6 +155,8 @@
       background-color: #e61f2f;
   }
 
+  
+
   @media (max-width: 768px) {
       .header-container {
           display: flex;
@@ -174,11 +171,7 @@
           top: auto;
           transform: none;
       }
-      .nav-hope-logo {
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-      }
+     
       .buttons {
           position: relative;
           right: 0;
@@ -225,29 +218,6 @@
       }
   }
 
-  /* @media(min-width:1200px) {
-      .navbutton {
-          margin-top: 2.9em !important;
-      }
-  }
-
-  .dropdown:hover .dropdown-menu {
-      display: block;
-  }
-
-  @media(max-width: 340px) {
-      .nav-hope-logo {
-          transform: translateX(-50%);
-          position: relative;
-      }
-  }
-
-  @media(max-width: 320px) {
-      #nav-bar-button {
-          position: relative !important;
-          top: 7px !important;
-          font-size: .5rem;
-      }
-  } */
+  
 
 </style>

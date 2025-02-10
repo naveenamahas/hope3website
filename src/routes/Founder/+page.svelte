@@ -15,7 +15,7 @@ import Nav from "../../components/Nav.svelte";
       src="founder_banner.jpg"  
       alt="Founder" class="banner"
     />
-    <h3 class="tit">founder</h3>
+    <h3 class="tit">Founder</h3>
  
     <div class="founder-container">
       <div class="founder-image">
@@ -180,7 +180,7 @@ import Nav from "../../components/Nav.svelte";
   /* Banner */
   .banner {
     width: 120%;
-    height: 300px;
+    height: 280px;
     object-fit: cover;
   }
 
@@ -193,8 +193,8 @@ import Nav from "../../components/Nav.svelte";
     padding-left: 5%;
     font-family: Montserrat, sans-serif;
     margin: 0;
-    width: 100%;
-    text-align: center;
+    width: 95%;
+    text-align: left;
   }
 
   /* Founder Container */
@@ -256,10 +256,17 @@ import Nav from "../../components/Nav.svelte";
   }
 
   /* Mobile View */
+
+
+  @media (max-width:320){
+    .banner{
+      max-height: 50px;
+    }
+  }
   @media (max-width: 768px) {
     .banner {
       width: 100%;
-      height: 150px;
+      height: 220px;
       object-fit: cover;
     }
 
@@ -267,6 +274,7 @@ import Nav from "../../components/Nav.svelte";
       font-size: 35px;
       width: 95%;
       text-align: center;
+      
     }
 
     .founder-container {
@@ -304,10 +312,10 @@ import Nav from "../../components/Nav.svelte";
   }
 
   /* Tablet View */
-  @media (max-width: 1024px) {
+  @media (max-width: 380px) {
     .banner {
-      width: 100%;
-      height: 150px;
+     
+      height: 100px;
       
     }
     .tit {
@@ -356,7 +364,7 @@ import Nav from "../../components/Nav.svelte";
     .banner {
       width: 100%;
       height: auto;
-      max-height: 600px;
+      max-height: 500px;
     }
 
     .founder-container {

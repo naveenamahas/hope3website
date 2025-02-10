@@ -271,8 +271,10 @@
       {/each}
   
       <!-- svelte-ignore a11y_click_events_have_key_events -->
+      <!-- svelte-ignore a11y_no_static_element_interactions -->
       <div class="arrow left" on:click={prevImage}>&#10094; </div>
       <!-- svelte-ignore a11y_click_events_have_key_events -->
+      <!-- svelte-ignore a11y_no_static_element_interactions -->
       <div class="arrow right" on:click={nextImage}>&#10095; </div>
     </div>
   

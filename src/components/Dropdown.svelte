@@ -11,8 +11,10 @@
       font-family: 'Montserrat', sans-serif;
     }
     .dropdown {
+      font-family: 'Montserrat', sans-serif;
       position: relative;
       display: inline-block;
+      
     }
   
     .dropdown-content {
@@ -34,7 +36,7 @@
   
     .dropdown-content a:hover {
       background-color: #f1f1f1;
-      color: #3431e3;
+      color: #0078bd !important;
     }
   
     .dropdown:hover .dropdown-content {
@@ -45,12 +47,12 @@
       cursor: pointer;
       text-decoration: none;
       color: #7b7a7a;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat", sans-serif !important;
       font-size: 1rem;
     }
   
     .dropdown-title:hover {
-      color: #3431e3;
+      color: #0078bd !important;
     }
   </style>
   

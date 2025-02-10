@@ -50,6 +50,7 @@
   }
 </script>
 
+<!-- svelte-ignore css_unused_selector -->
 <style>
   body {
     font-family: "Montserrat", sans-serif;
@@ -184,16 +185,16 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .how-we-do-it {
-      display: none; /* Hide the desktop version of the image in mobile view */
+      display: none; 
     }
 
     .sections {
-      display: block; /* Show sections only in mobile view */
+      display: block; 
     }
 
     .sections img {
-      width: 100%; /* Make the hope.jpg image fit within the mobile view */
-      height: 50vh; /* Adjust image height for mobile */
+      width: 100%; 
+      height: 50vh; 
       object-fit: cover;
     }
 
@@ -251,6 +252,7 @@
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     cursor: pointer; 
+    text-decoration: none;
   }
 
   .button.apply {
@@ -313,6 +315,7 @@
   <!-- Sections for mobile view -->
   <div class="sections">
     <!-- Hope image for mobile -->
+    <!-- svelte-ignore a11y_img_redundant_alt -->
     <img src="hope.jpg" alt="Hope Image" />
     <div class="section">
       <h3>Labs</h3>
