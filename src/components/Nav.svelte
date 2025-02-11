@@ -2,6 +2,8 @@
   import Dropdown from "./Dropdown.svelte";
   // @ts-ignore
   import { browser } from "$app/environment";
+  // @ts-ignore
+  import { goto } from "$app/navigation";
 
   const dropdownItems = [
     { name: "Founders", link: "/hope3website/Founder" },
@@ -12,6 +14,13 @@
 
   let currentPath = browser ? window.location.pathname : '/hope3website/';
   let showMobileMenu = false;
+
+  
+
+    // @ts-ignore
+    function openApplyPage() {
+        goto("/apply"); // Navigates to /apply without a full reload
+    }
 </script>
 
 <header>

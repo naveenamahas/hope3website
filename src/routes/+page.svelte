@@ -194,7 +194,7 @@
   }
   
   /* Footer Quote Section */
-  .fond {
+  .font {
     text-align: center;
     font-family: "Comic Sans MS", cursive;
     color: gray;
@@ -288,7 +288,7 @@
     {/if}
   </section>
   
-  <div class="fond">
+  <div class="font" >
     <p>
       "Learning gives creativity, creativity leads to thinking, thinking provides 
       <br> knowledge, and knowledge makes you great."
@@ -300,4 +300,5 @@
   <Card />
   <Footer />
   <Contact />
+  
   

@@ -137,8 +137,6 @@ import Nav from "../../components/Nav.svelte";
   <style>
     /* Container */
     .container {
-      /* width: 80%;
-      max-width: 1200px; */
       margin: 0 auto;
     }
   
@@ -164,10 +162,10 @@ import Nav from "../../components/Nav.svelte";
       gap: 1rem;
     }
   
-    /* .card:hover {
+     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    } */
+    } 
   
     .card img {
       width: 100%;
@@ -260,6 +258,7 @@ import Nav from "../../components/Nav.svelte";
     .right-section button:hover {
       background-color: #c0392b;
     }
+   
   
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -281,7 +280,7 @@ import Nav from "../../components/Nav.svelte";
     }
     .tittle{
       background-color: rgb(236, 231, 231);
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 500;
         color: rgb(104, 104, 102);
         padding-left: 1%;
