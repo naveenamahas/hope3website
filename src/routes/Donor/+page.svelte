@@ -24,7 +24,7 @@
   align-items: center;
   gap: 2rem;
   height: 90vh;
-  background: url('donor.png') no-repeat center center/cover;
+  background: url('/donor.png') no-repeat center center/cover;
   text-align: center;
 }
 

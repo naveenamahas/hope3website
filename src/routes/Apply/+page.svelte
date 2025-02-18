@@ -201,7 +201,7 @@ button {
   }
   .image-container {
       flex: 1;
-      background: url('student.jpg') no-repeat center center;
+      background: url('/student.jpg') no-repeat center center;
       background-size: cover;
       border-radius: 3px;
   }
