@@ -127,6 +127,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   
   .carousel {
@@ -194,14 +195,19 @@
   }
   
   /* Footer Quote Section */
-  .font {
-    text-align: center;
-    font-family: "Comic Sans MS", cursive;
-    color: gray;
-    font-size: 1.5rem;
-    padding: 1rem;
-    margin-top: 0%;
-  }
+  @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.font {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+  font-size: 1.5rem;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
   
   @media (max-width: 768px) {
     header {
@@ -281,8 +287,9 @@
     {#if currentImage === 0}
       <div class="hero-content">
         <div class="responsive-buttons">
-          <a href="https://www.hope3.org/donate.html" class="button donate">Donate</a>
-          <a href="https://www.hope3.org/apply2024.html" class="button apply">Apply</a>
+          <a href="/hope3website/Donor" class="button donate">Donate</a>
+          <a href="/hope3website/Apply" class="button apply">Apply</a>
+    
         </div>
       </div>
     {/if}

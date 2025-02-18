@@ -44,71 +44,76 @@
     font-family: 'Montserrat', sans-serif; 
   }
   /* Title Styling */
-  .tit {
-    background-color: rgb(187, 239, 246);
-    font-size: 50px;
-    font-weight: 500;
-    color: rgb(104, 104, 102);
-    padding-left: 5%;
-    font-family: Montserrat, sans-serif;
-    margin: 0;
-  }
+.tit {
+  background-color: rgb(187, 239, 246);
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(104, 104, 102);
+  padding-left: 5%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  text-align: center; /* Center the title for better appearance on small screens */
+}
 
-  /* Banner Image Styling */
+/* Banner Image Styling */
+.img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.title {
+  margin-bottom: 2%;
+  margin-top: 3%;
+  text-align: start;
+  color: rgb(128, 127, 127);
+  font-size: 1.2rem;
+  margin-left: 15%;
+  padding: 15px 8px;
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
   .img {
-    width: 100%;
-    height: 400px; /* Set a height for the banner image */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    display: block;
-    margin: 0 auto;
+    height: 220px;
   }
-
-  /* Responsive Design for Banner Image */
-  @media (max-width: 768px) {
-      .img {
-          height: 220px; 
-      }
-      .tit
-    {
-      font-size: 1.8rem;
-      text-align: center;
-    }
+  .tit {
+    font-size: 2rem; /* Reduce font size */
+    text-align: center;
   }
-
-  @media (max-width: 480px) {
-      .img {
-        max-height: 90px; 
-      }
-    .tit
-    {
-      font-size: 1.8rem;
-      text-align: center;
-    }
-  }
-
-  /* Title Section Styling */
   .title {
-    margin-bottom: 2%;
-    margin-top: 3%;
-    text-align: start;
-    color: rgb(128, 127, 127);
-    font-size: 18px;
-    margin-left: 15%;
-    padding: 15px 8px;
-    
+    font-size: 12px; /* Adjust description font size */
   }
+}
 
-  /* Image Section Styling */
-  .image {
-    width: 100%;
-    gap: 1.5rem; 
+@media (max-width: 480px) {
+  .img {
+    max-height: 90px;
   }
+  .tit {
+    font-size: 1.5rem; /* Further reduce font size */
+    text-align: center;
+  }
+  .title {
+    font-size: 13px;
+  }
+}
 
-  .image img {
-    width: 70%; 
-    height: auto; 
-    display: block; 
-    margin-left: 15%; 
-    margin-bottom: 3%;
-  }
+/* Title Section Styling */
+
+
+/* Image Section Styling */
+.image {
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.image img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: 15%;
+  margin-bottom: 3%;
+}
+
 </style>

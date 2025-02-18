@@ -105,6 +105,7 @@ import Nav from "../../components/Nav.svelte";
       
       {#each cards as card}
         <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div class="card" on:click={() => showDetails(card)}>
           <img src={card.imageUrl} alt={card.name} />
           <div class="info">
@@ -132,9 +133,8 @@ import Nav from "../../components/Nav.svelte";
     </div>
   </div>
   {/if}
+<style>
 
-  
-  <style>
     /* Container */
     .container {
       margin: 0 auto;
@@ -263,7 +263,7 @@ import Nav from "../../components/Nav.svelte";
     /* Responsive Design */
     @media (max-width: 768px) {
       .grid {
-        grid-template-columns: repeat(1, 1fr); /* Stack images for smaller screens */
+        grid-template-columns: repeat(1, 1fr); 
       }
   
       .details-container {

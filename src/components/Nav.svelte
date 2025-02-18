@@ -1,9 +1,11 @@
 <script>
+// @ts-nocheck
+
   import Dropdown from "./Dropdown.svelte";
   // @ts-ignore
   import { browser } from "$app/environment";
-  // @ts-ignore
-  import { goto } from "$app/navigation";
+ 
+
 
   const dropdownItems = [
     { name: "Founders", link: "/hope3website/Founder" },
@@ -17,10 +19,7 @@
 
   
 
-    // @ts-ignore
-    function openApplyPage() {
-        goto("/apply"); // Navigates to /apply without a full reload
-    }
+
 </script>
 
 <header>
@@ -41,9 +40,10 @@
     </nav>
 
     <div class="buttons">
-      <a href="https://www.hope3.org/donate.html" class="button donate">Donate</a>
-      <a href="https://www.hope3.org/apply2024.html" class="button apply">Apply</a>
-    </div>
+      <a href="/hope3website/Donor" class="button donate">Donate</a>
+      <a href="/hope3website/Apply" class="button apply">Apply</a>
+
+     </div>
   </div>
 </header>
 
@@ -85,6 +85,7 @@
       justify-content: center;
       gap: 1rem;
       flex-grow: 1;
+      
   }
 
   nav.mobile-visible {

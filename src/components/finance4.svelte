@@ -2,8 +2,8 @@
     import { onMount } from "svelte";
 
     let startIndex = 0;
-    let imagesPerView = 4; // Default for large screens
-    let isMobile = false;  // Detect mobile view
+    let imagesPerView = 4; 
+    let isMobile = false;  
 
     const successProfiles = [
         { image: "a1.png", name: "Mr Vishvakraj", title: "Govt of California, USA" },
@@ -29,10 +29,10 @@
     function updateView() {
         const width = window.innerWidth;
         if (width < 768) {
-            imagesPerView = 2; // Mobile view - 2 images
+            imagesPerView = 2; 
             isMobile = true;
         } else {
-            imagesPerView = successProfiles.length; // Desktop - Show all
+            imagesPerView = successProfiles.length; 
             isMobile = false;
         }
         startIndex = 0;

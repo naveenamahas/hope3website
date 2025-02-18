@@ -10,6 +10,7 @@
 </script>
 
 <style>
+  
   .statistics-container {
     display: flex;
     justify-content:space-evenly;
@@ -44,7 +45,7 @@ margin-top: 20px;
 .cta-section p {
 margin: 10px 0;
 color: #6b6b6b;
-font-family: "Comic Sans MS", cursive;
+font-family: "Montserrat", sans-serif;
 font-size: medium;
 }
 
@@ -62,6 +63,8 @@ border: none;
 border-radius: 5px;
 font-size: 1rem;
 cursor: pointer;
+text-decoration: none; /* Remove underline */
+display: inline-block; /* Ensure it behaves like a button */
 }
 
 .join-button:hover {
@@ -75,7 +78,7 @@ background-color: #ffb700;
   flex-direction: row;
   justify-content: space-evenly;
   background-image: none;
-  background-color: #ffb700;
+  background-color: #f3d826;
 }
 
 .stat-box {
@@ -90,10 +93,18 @@ background-color: #ffb700;
   padding: 20px 20px;
 }
 
+.statistics-container > .stat-box:nth-child(1),
+.statistics-container > .stat-box:nth-child(2),
+.statistics-container > .stat-box:nth-child(2) {
+  justify-self: center;
+  padding-left: 10%;
+}
+
+
 .statistics-container > .stat-box:nth-child(4),
 .statistics-container > .stat-box:nth-child(5) {
   justify-self: center;
-  padding-left: 10%;
+  padding-left: 90%;
 }
 
 .stat-value {
@@ -179,5 +190,6 @@ background-color: #ffb700;
     None left behind. Everyone has an opportunity to rise and achieve. <br/> 
     We lift others by providing them financial and educational support along their journey for a bright future.
   </p>
-  <button class="join-button">Join Us</button>
+  <!-- <button class="join-button">Join Us</button> -->
+  <a href="/hope3website/getinvoce" class="join-button">Join Us</a>
 </div>

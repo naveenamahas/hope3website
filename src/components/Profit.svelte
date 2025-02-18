@@ -87,8 +87,11 @@
         flex-direction: column;
         align-items: center;
         text-decoration: none;
-        color: black;
+        color: rgb(90, 134, 228);
     }
+    .logo-container a:hover {
+    color: rgb(57, 57, 238);
+}
 
     .logo-container img {
         width: 130px;

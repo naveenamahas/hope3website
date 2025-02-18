@@ -43,14 +43,15 @@ onMount(() => {
 });
 </script>
 
+
 <style>
 
     /* General Styling */
-    body {
+    * {
         margin: 0;
         padding: 0;
         font-family: 'Montserrat', sans-serif;
-        background-color: #f9f9f9;
+        /* background-color: #f9f9f9; */
         color: #444;
         text-align: center;
     }
@@ -75,7 +76,7 @@ onMount(() => {
         padding: 10px 0;
     }
 
-    .fond {
+    /* .font {
         font-size: 15px;
         color: rgb(118, 117, 117);
         font-family: 'Montserrat', sans-serif;
@@ -85,7 +86,35 @@ onMount(() => {
         text-align: justify;
     }
 
-    .fond p {
+    .font p {
+        margin: 5 10px;
+        padding: 15px 15px;
+        background-color: #f9f9f9;
+        border-left: 5px solid rgba(170, 224, 224, 0.916);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    } */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+        animation: fadeIn 2s ease-in;
+    }
+
+    .font {
+        font-size: 15px;
+        color: rgb(118, 117, 117);
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.8;
+        margin: 30px auto;
+        max-width: 800px; 
+        text-align: justify;
+        animation: fadeIn 2s ease-in;
+    }
+
+    .font p {
         margin: 5 10px;
         padding: 15px 15px;
         background-color: #f9f9f9;
@@ -93,6 +122,7 @@ onMount(() => {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
     }
+
 
     /* Success Section Styling */
     .success-section {
@@ -106,8 +136,8 @@ onMount(() => {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: #555;
-    margin-top: 10px;
+    color: #808080;
+    margin-bottom: 35px;
 }
 
     .success-container {
@@ -187,7 +217,7 @@ onMount(() => {
 <div>
     <h1 class="tit">Our People</h1>
 </div>
-<div class="fond">
+<div class="font fade-in">
     <p>
         There is an army of people making this HOPE3 a reality. 
         We have industrial partners where our selected students are given 

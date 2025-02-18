@@ -215,7 +215,10 @@
   .sections {
     display: none; /* Initially hidden */
     margin-top: 50px;
-    background-color: rgb(214, 238, 245);
+    background-color: rgb(209, 235, 243);
+    width: 105%;
+   
+    
   }
 
   .section {
@@ -237,6 +240,8 @@
     color: #555;
     margin-bottom: 1rem;
   }
+  
+  
 
   .buttons {
     display: flex;
@@ -276,8 +281,15 @@
   /* Show the sections in mobile view */
   @media (max-width: 768px) {
     .sections {
-      display: block; /* Sections visible only on mobile */
+      display: block; 
     }
+    .sections img {
+  width: 100vw; 
+  height: auto; 
+  display: block; 
+  object-fit: cover; 
+}
+
   }
 </style>
 
@@ -316,7 +328,7 @@
   <div class="sections">
     <!-- Hope image for mobile -->
     <!-- svelte-ignore a11y_img_redundant_alt -->
-    <img src="hope.jpg" alt="Hope Image" />
+    <img src="homepage_banner_2_mob.jpg" alt="Hope Image" />
     <div class="section">
       <h3>Labs</h3>
       <p>Learn about our unique and immersive Labs!</p>
@@ -342,8 +354,9 @@
       <p>Want to work for us? Click to learn more about how you can become an intern!</p>
     </div>
     <div class="buttons">
-      <a href="https://www.hope3.org/donate.html" class="button donate">Donate</a>
-      <a href="https://www.hope3.org/apply2024.html" class="button apply">Apply</a>
+      <a href="/hope3website/Donor" class="button donate">Donate</a>
+      <a href="/hope3website/Apply" class="button apply">Apply</a>
+
     </div>
   </div>
 </div>

@@ -17,7 +17,7 @@ import Nav from "../../components/Nav.svelte";
     />
     <h3 class="tit">Founder</h3>
  
-    <div class="founder-container">
+   <div class="founder-container">
       <div class="founder-image">
         <img
           src="founder_Image_palani.jpg"  
@@ -45,7 +45,12 @@ import Nav from "../../components/Nav.svelte";
             Professionally he works at Amazon Corporation, Washington as a Senior Software Engineer. 
             He holds a MS in Computer Science from East Carolina University. 
             On the personal front he loves playing tennis and outdoor activities with his family.
-            He can be reached at <a href="mailto:palani@hope3.org">palani@hope3.org</a>.
+            He can be reached at 
+            
+            <a class="mailcolor" href="mailto:palani@hope3.org">neel@hope3.org
+              <!-- svelte-ignore a11y_missing_attribute -->
+              <img class="mail" src="icons8_mail_32.png">
+            </a>
         </p>
   
         <!-- Video Section -->
@@ -53,7 +58,7 @@ import Nav from "../../components/Nav.svelte";
           <iframe
             width="360"
             height="200"
-            src="https://www.youtube.com/embed/embedded-video-link" 
+            src="https://www.youtube.com/embed/yBdzHOTwJrQ" 
             title="What is Hope3 Foundation?"
             frameborder="0"
             allowfullscreen
@@ -62,10 +67,11 @@ import Nav from "../../components/Nav.svelte";
       </div>
     </div>
   </div>
-  <div class="founder-page">
+  
+  <div class="founder-page" style="background-color: #e7e5e5f3;">
     
   
-    <div class="founder-container" style="background-color: #f0f0f0; width:100%">
+    <div class="founder-container" >
 
       <div class="founder-image">
         <img
@@ -96,7 +102,12 @@ import Nav from "../../components/Nav.svelte";
             Germany and US. Neelakandan has a Masters in Business 
             Administration degree from University of Wisconsin and 
             Bachelors of Mechanical Engineering from Kumaraguru College of Technology, 
-            Coimbatore, India. Neelakandan can be reached at  <a href="mailto:palani@hope3.org">palani@hope3.org</a>.
+            Coimbatore, India. Neelakandan can be reached at 
+            <br> 
+            <a class="mailcolor" href="mailto:neel@hope3.org">neel@hope3.org
+              <!-- svelte-ignore a11y_missing_attribute -->
+              <img class="mail" src="icons8_mail_32.png">
+            </a>
         </p>
   
         <!-- Video Section -->
@@ -104,7 +115,7 @@ import Nav from "../../components/Nav.svelte";
           <iframe
             width="360"
             height="200"
-            src="https://www.youtube.com/embed/embedded-video-link" 
+            src="https://www.youtube.com/embed/7ZDF4-hB5Ec" 
             title="What is Hope3 Foundation?"
             frameborder="0"
             allowfullscreen
@@ -140,7 +151,12 @@ import Nav from "../../components/Nav.svelte";
             helping in the manufacturing process of semiconductor chips.
             He holds a MS, PhD from Cornell University, New York in Mechanical Engineering, 
             and a M Tech in Computational Science from Indian Institute of Science, 
-            Bangalore. He can be reached at  <a href="https://www.hope3.org/meenakshi.sundaram@hope3.org">meenakshi.sundaram@hope3.org</a>.
+            Bangalore. He can be reached at  
+           
+            <a class="mailcolor" href="https://www.hope3.org/meenakshi.sundaram@hope3.org">meenakshi.sundaram@hope3.org
+              <!-- svelte-ignore a11y_missing_attribute -->
+              <img class="mail" src="icons8_mail_32.png">
+            </a>
         </p>
   
         <!-- Video Section -->
@@ -148,7 +164,7 @@ import Nav from "../../components/Nav.svelte";
           <iframe
             width="360"
             height="200"
-            src="https://www.youtube.com/embed/embedded-video-link" 
+            src="https://www.youtube.com/embed/z_n0PqhIuKA" 
             title="What is Hope3 Foundation?"
             frameborder="0"
             allowfullscreen
@@ -183,6 +199,12 @@ import Nav from "../../components/Nav.svelte";
     height: 280px;
     object-fit: cover;
   }
+  .mail {
+  vertical-align: bottom;
+  width: 2rem;
+  position: relative; /* Add relative positioning */
+  top: 5px; /* This will move the image 2px from the bottom */
+}
 
   /* Title */
   .tit {
@@ -196,7 +218,7 @@ import Nav from "../../components/Nav.svelte";
     width: 95%;
     text-align: left;
   }
-
+  
   /* Founder Container */
   .founder-container {
     display: flex;
@@ -250,8 +272,8 @@ import Nav from "../../components/Nav.svelte";
 
   /* Founder Video */
   .founder-video iframe {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(26, 35, 196, 0.1);
+    border-radius: 1px;
+    box-shadow: 4px 4px 6px rgba(30, 39, 205, 0.1);
     margin-left: 0;
   }
 
@@ -308,6 +330,7 @@ import Nav from "../../components/Nav.svelte";
       width: 100%;
       max-width: 300px;
       height: 150px;
+      margin-left: 2px;
     }
   }
 
@@ -356,6 +379,7 @@ import Nav from "../../components/Nav.svelte";
       display: table-cell;
     vertical-align: middle;
     padding: 0 15px;
+    
     }
   }
 
