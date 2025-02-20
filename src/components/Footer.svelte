@@ -21,8 +21,8 @@
 } 
 
 .stat-icon img {
-    width: 50px; /* Adjust size */
-    height: 50px; /* Adjust size */
+    width: 70px; /* Adjust size */
+    height: 70px; /* Adjust size */
     filter: grayscale(100%); /* Apply grayscale if needed */
     }
 

@@ -21,14 +21,19 @@
 <div class="container">
   <div class="left-section">
     <img src="logo.png" alt="Hope Foundation Logo" />
-    <p>
-      HOPE3 FOUNDATION<br />
-      2135, 204th PL NE, Sammamish, WA - 98074<br />
-      contact@hope3.org<br />
-      425-200-4370<br />
-      US IRS 501(C)(3) approved organization<br />
-      (Tax ID: 83-4354181)
-    </p>
+    <div>
+      <!-- <p><strong>HOPE3 FOUNDATION</strong></p>
+      <p>2135, 204th PL NE, Sammamish, <br>WA - 98074</p>
+      <p>contact@hope3.org <br>425-200-4370</p> -->
+      <address class="mt-4 footeraddr">
+        <span class="title">Hope3 Foundation</span>
+        <br>2135, 204th PL NE, Sammamish,<br>WA - 98074
+        <p class="mt-1">contact@hope3.org<br>425-200-4370</p>
+      </address>
+      <span class="approval">US IRS 501(C)(3) approved organization<br>(Tax ID:83-4354181)</span>
+      
+    </div>
+    
     <div class="footer-links">
       <div>
         <a href="/">Home</a>
@@ -69,27 +74,31 @@
           type="text"
           placeholder="First Name*"
           bind:value={formData.firstName}
+          required
         />
         <input
           type="text"
           placeholder="Last Name*"
           bind:value={formData.lastName}
+          required
         />
       </div>
       <div class="form-group">
-        <input type="email" placeholder="Email*" bind:value={formData.email} />
-        <input type="tel" placeholder="Phone*" bind:value={formData.phone} />
+        <input type="email" placeholder="Email*" bind:value={formData.email} required />
+        <input type="tel" placeholder="Phone*" bind:value={formData.phone}  required/>
       </div>
       <div class="form-group">
         <input
           type="text"
           placeholder="WhatsApp"
           bind:value={formData.whatsapp}
+          required
         />
         <input
           type="text"
           placeholder="Address*"
           bind:value={formData.address}
+          required
         />
       </div>
       <div class="form-group">
@@ -97,10 +106,12 @@
           type="text"
           placeholder="Subject*"
           bind:value={formData.subject}
+          required
         />
       </div>
       <div class="form-group">
         <textarea placeholder="Message" bind:value={formData.message}
+        required
         ></textarea>
       </div>
       <div class="recaptcha">
@@ -113,13 +124,31 @@
 </div>
 
 <style>
+  
   .container {
     display: flex;
     justify-content: space-between;
     padding: 20px 10%;
     background-color: #e7e5e5f3;
   }
+  .approval {
+    font-size: small;
+    font-weight: bolder;
+    font-family: Montserrat, sans-serif !important;
+}
 
+.title {
+    margin-top: 1.5rem !important;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif !important;
+    
+}
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+    
+}
   .left-section {
     width: 40%;
     display: flex;
@@ -131,7 +160,7 @@
     width: 150px;
     margin-bottom: 20px;
   }
-
+  
   .footer-links {
     display: flex;
     justify-content: space-between;
@@ -178,32 +207,23 @@
 
   form {
     background-color: #f9f9f9;
-
     padding: 20px;
-
     border: 1px solid #ddd;
-
     border-radius: 5px;
   }
 
   .form-group {
     display: flex;
-
     gap: 10px;
-
     margin-bottom: 15px;
   }
 
   input,
   textarea {
     width: 100%;
-
     padding: 10px;
-
     border: 1px solid #ccc;
-
     border-radius: 5px;
-
     font-size: 14px;
   }
 
@@ -269,6 +289,7 @@
     .left-section,
     .right-section {
       width: 100%;
+      
     }
 
     .left-section img {
@@ -339,7 +360,8 @@
   }
 
     .left-section p {
-      font-size: 12px;
+      font-size: 15px;
+      gap: 10px;
     }
   }
 

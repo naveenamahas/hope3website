@@ -11,12 +11,18 @@
    */
   let openSection = null; // Track opened section
 
+  /**
+   * @param {string | null} section
+   */
   function toggleSection(section) {
     openSection = openSection === section ? null : section;
   }
 </script>
 
 <style>
+  *{
+    font-family: Montserrat, sans-serif !important;
+  }
   /* Desktop View */
   .section-container {
     display: flex;
@@ -91,7 +97,11 @@
     font-family: Montserrat, sans-serif;
     margin: 0;
   }
-
+  .subtitle{
+    text-align: center;
+    font-family: Montserrat, sans-serif !important;
+    color: #828282;
+  }
   .img {
     height: auto;
     width: 100%;
@@ -150,6 +160,9 @@
     .accordion {
       display: block;
     }
+    .subtitle{
+      font-size: 1.2rem;
+    }
   }
 </style>
 
@@ -161,7 +174,7 @@
 <div>
   <h1 class="tit">Get Involved</h1>
 </div>
-
+<h1 class="subtitle"> Let's get started.Choose an option.</h1>
 <!-- Desktop View -->
 <div class="section-container">
   <div class="form-card">

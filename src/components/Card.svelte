@@ -60,7 +60,7 @@
 
   .container {
     width: 100%;
-    padding: 1rem 1rem;
+    /* padding: 1rem 1rem; */
   }
 
   /* Card Section */
@@ -93,7 +93,7 @@
   }
 
   .card-content {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
 
   .card-title {
@@ -129,9 +129,9 @@
     border: none;
   }
 
-  .read-more:hover {
+  /* .read-more:hover {
     text-decoration: underline;
-  }
+  } */
 
   .how-we-do-it {
     margin-top: 30px;
@@ -206,24 +206,25 @@
       font-size: 1rem;
     }
 
-    .buttons {
+    /* .buttons {
       gap: 1rem;
-    }
+    } */
   }
 
   /* Sections for mobile view below the image */
+  
+
   .sections {
-    display: none; /* Initially hidden */
-    margin-top: 50px;
-    background-color: rgb(209, 235, 243);
-    width: 105%;
-   
-    
-  }
+  display: none;
+  margin-top: 50px;
+  background-color: rgb(209, 235, 243);
+  width: 105%; /* Changed from 105% */
+}
+
 
   .section {
     text-align: center;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
   }
 
   .section h3 {
@@ -231,7 +232,7 @@
     text-transform: capitalize;
     font-size: 1.2rem;
     text-align: center;
-    margin-left: 2px;
+    /* margin-left: 2px; */
     font-family: sans-serif;
   }
 
@@ -240,24 +241,32 @@
     color: #555;
     margin-bottom: 1rem;
   }
-  
+  .sections img {
+    width: 100vw; /* Ensures full viewport width */
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
   
 
   .buttons {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    gap: 1px;
+    
 }
   .button {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border: none;
     border-radius: 20px;
     font-weight: bold;
+    font-size: 12px;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     cursor: pointer; 
     text-decoration: none;
+    margin-bottom: 20px;
+    margin-left: 50px;
   }
 
   .button.apply {
@@ -283,12 +292,7 @@
     .sections {
       display: block; 
     }
-    .sections img {
-  width: 100vw; 
-  height: auto; 
-  display: block; 
-  object-fit: cover; 
-}
+    
 
   }
 </style>

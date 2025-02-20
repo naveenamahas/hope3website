@@ -21,19 +21,19 @@
       { id: 3, title: "Youth Conference", date: "Aug 2023", image: "aug_2023.jpg", path: "/hope3website/aug2023" },
     ],
     2022: [
-      { id: 4, title: "Leadership Program", date: "Jun 2022", image: "hope3_200.png" },
+      { id: 4, title: "UPDATE SOON", date: "Jun 2022", image: "hope3_200.png" },
     ],
     2021: [
-      { id: 5, title: "Leadership Program", date: "Jun 2021", image: "hope3_200.png" },
+      { id: 5, title: "UPDATE SOON", date: "Jun 2021", image: "hope3_200.png" },
     ],
     2020: [
-      { id: 6, title: "Leadership Program", date: "Jun 2020", image: "hope3_200.png" },
+      { id: 6, title: "UPDATE SOON", date: "Jun 2020", image: "hope3_200.png" },
     ],
     2019: [
-      { id: 7, title: "Leadership Program", date: "Jun 2019", image: "hope3_200.png" },
+      { id: 7, title: "UPDATE SOON", date: "Jun 2019", image: "hope3_200.png" },
     ],
     2018: [
-      { id: 7, title: "Leadership Program", date: "Jun 2019", image: "hope3_200.png" },
+      { id: 8, title: "UPDATE SOON", date: "Jun 2018", image: "hope3_200.png" },
     ],
   };
   
@@ -101,9 +101,9 @@
   <Contact/>
   
   <style>
-    body {
+    *{
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Montserrat, sans-serif !important;
     }
   
   

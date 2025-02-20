@@ -1,45 +1,98 @@
 <script>
-  // @ts-nocheck
   import Footer from "../components/Footer.svelte";
   import Dropdown from "../components/Dropdown.svelte";
   import Nav from "../components/Nav.svelte";
   import { onMount } from "svelte";
   import Card from "../components/Card.svelte";
   import Contact from "../components/Contact.svelte";
-  
+
   let images = [
-    "home1.jpg", // Replace with actual image paths
+    "home1.jpg", // Desktop images
     "home2.jpg",
     "home3.jpg",
   ];
-  let currentImage = 0;
-  
-  let interval;
-  
-  const nextImage = () => {
-    currentImage = (currentImage + 1) % images.length;
-  };
-  
-  const prevImage = () => {
-    currentImage = (currentImage - 1 + images.length) % images.length;
-  };
-  
-  onMount(() => {
-    interval = setInterval(nextImage, 7000); // Automatically transition
-    
-    return () => clearInterval(interval);
-  });
-  
-  const dropdownItems = [
-    { name: "Founders", link: "#founders" },
-    { name: "Mission/Vision", link: "#mission" },
-    { name: "Financials", link: "#financials" },
-    { name: "Admissions", link: "#admissions" },
+
+  let mobileImages = [
+    "homepage_banner_mob_1.jpg", // images for mobile
+    "homepage_banner_mob_new.jpg",
+    "homepage_banner_new_mob_3.jpg",
   ];
-  </script>
+
+  let currentImage = 0;
+  let activeImages = images; // Default to desktop images
+
+  /**
+   * @type {string | number | NodeJS.Timeout | undefined}
+   */
+  let interval;
+
+  const nextImage = () => {
+    currentImage = (currentImage + 1) % activeImages.length;
+  };
+
+  const prevImage = () => {
+    currentImage = (currentImage - 1 + activeImages.length) % activeImages.length;
+  };
+
+  onMount(() => {
+    // Detect screen width and switch images
+    const updateImages = () => {
+      activeImages = window.innerWidth <= 768 ? mobileImages : images;
+      currentImage = 0; // Reset index when switching
+    };
+
+    updateImages(); // Run once on mount
+    window.addEventListener("resize", updateImages);
+
+    interval = setInterval(nextImage, 7000); // Auto transition
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", updateImages);
+    };
+  });
+</script>
+<Nav/>
+<section class="hero">
+  <div class="carousel">
+    {#each activeImages as image, index}
+      <!-- svelte-ignore a11y_img_redundant_alt -->
+      <img src={image} alt="Hero Image" class:active={index === currentImage} />
+    {/each}
+
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div class="arrow left" on:click={prevImage}>&#10094; </div>
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div class="arrow right" on:click={nextImage}>&#10095; </div>
+  </div>
+
+  {#if currentImage === 0}
+    <div class="hero-content">
+      <div class="responsive-buttons">
+        <a href="/hope3website/Donor" class="button donate">Donate</a>
+        <a href="/hope3website/Apply" class="button apply">Apply</a>
+      </div>
+    </div>
+  {/if}
+</section>
+
   
-  <!-- svelte-ignore css_unused_selector -->
-  <style>
+  <div class="content" >
+    <p>
+      "Learning gives creativity, creativity leads to thinking, thinking provides 
+      <br> knowledge, and knowledge makes you great."
+      <br />
+      - Abdul Kalam
+    </p>
+  </div>
+  
+  <Card />
+  <Footer />
+  <Contact />
+<!-- svelte-ignore css_unused_selector -->
+<style>
   /* Global Styles */
   * {
     box-sizing: border-box;
@@ -200,7 +253,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.font {
+.content {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: gray;
@@ -264,48 +317,10 @@
     .hero-content p {
       font-size: 0.9rem;
     }
+    .content{
+      font-size: 1rem;
+    }
   }
   </style>
-  
-  <Nav />
-  
-  <section class="hero">
-    <div class="carousel">
-      {#each images as image, index}
-        <!-- svelte-ignore a11y_img_redundant_alt -->
-        <img src={image} alt="Hero Image" class:active={index === currentImage} />
-      {/each}
-  
-      <!-- svelte-ignore a11y_click_events_have_key_events -->
-      <!-- svelte-ignore a11y_no_static_element_interactions -->
-      <div class="arrow left" on:click={prevImage}>&#10094; </div>
-      <!-- svelte-ignore a11y_click_events_have_key_events -->
-      <!-- svelte-ignore a11y_no_static_element_interactions -->
-      <div class="arrow right" on:click={nextImage}>&#10095; </div>
-    </div>
-  
-    {#if currentImage === 0}
-      <div class="hero-content">
-        <div class="responsive-buttons">
-          <a href="/hope3website/Donor" class="button donate">Donate</a>
-          <a href="/hope3website/Apply" class="button apply">Apply</a>
-    
-        </div>
-      </div>
-    {/if}
-  </section>
-  
-  <div class="font" >
-    <p>
-      "Learning gives creativity, creativity leads to thinking, thinking provides 
-      <br> knowledge, and knowledge makes you great."
-      <br />
-      - Abdul Kalam
-    </p>
-  </div>
-  
-  <Card />
-  <Footer />
-  <Contact />
   
   
